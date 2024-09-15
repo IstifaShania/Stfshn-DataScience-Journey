@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="widget">
+        <h2>Forecasting Page</h2>
+        
+        {% if plot_html %}
+            <h3>Forecast Results</h3>
+            <div>{{ plot_html|safe }}</div>
+            <h3>Forecast Table</h3>
+            <div class="table-container">
+                {{ tables|safe }}
+            </div>
+        {% else %}
+            <h3>Upload CSV File for Forecast</h3>
+            <form action="{{ url_for('forecast') }}" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <input type="submit" value="Upload">
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

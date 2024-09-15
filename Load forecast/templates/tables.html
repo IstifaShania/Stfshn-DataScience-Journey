@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="widget">
+    <h2>Table Results</h2>
+    <div class="tables-container">
+        <h3>LSTM Prediction Results</h3>
+        <div class="table-container">
+            {{ lstm_table | safe }}
+        </div>
+
+        <h3>XGBoost Prediction Results</h3>
+        <div class="table-container">
+            {{ xgboost_table | safe }}
+        </div>
+
+        <h3>GRU Prediction Results</h3>
+        <div class="table-container">
+            {{ gru_table | safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}

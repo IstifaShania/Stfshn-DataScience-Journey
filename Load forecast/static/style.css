@@ -1,0 +1,161 @@
+/* General page styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333; /* Use a consistent color for all text */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #001f3f; /* Navy blue */
+    color: white;
+    padding: 40px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1a1a6e;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    padding: 40px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-bar h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.user-info p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.user-info p strong {
+    font-weight: 600;
+}
+
+.content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 100px; /* Ensure content area has a minimum height */
+}
+
+.widget {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #1a1a6e; /* Uniform link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Basic table styling */
+table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Styling for the table header */
+table.data thead th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Styling for the table cells */
+table.data tbody td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Zebra striping for table rows */
+table.data tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive table - adding horizontal scroll for small screens */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Hover effect for table rows */
+table.data tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Ensuring table fills the container */
+.table-container {
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Adding a little padding to the table */
+table.data {
+    margin: 0 auto;
+}
